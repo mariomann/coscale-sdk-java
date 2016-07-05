@@ -1,5 +1,6 @@
 package com.coscale.sdk.client;
 
+import com.coscale.sdk.client.applications.ApplicationsApi;
 import com.coscale.sdk.client.data.DataApi;
 import com.coscale.sdk.client.events.EventsApi;
 import com.coscale.sdk.client.metrics.MetricsApi;
@@ -82,4 +83,11 @@ public class ApiFactory {
     public RequestsApi getRequestsApi() {
         return new RequestsApi(api);
     }
+
+    /**
+     * Get a instance of ApplicationsApi.
+     *
+     * @return ApplicationsApi.
+     */
+    public ApplicationsApi getApplicationsApi() { return new ApplicationsApi(api); }
 }
